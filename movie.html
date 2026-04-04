@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="movie-page-title">Movie Details - Agasobanuye</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Agasobanuye</a>
+            </h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="movie-detail-container">
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading movie details...</p>
+        </div>
+
+        <div id="movie-content" class="movie-content" style="display: none;">
+            <div class="movie-info-section-full">
+                <h1 id="movie-title" class="movie-title"></h1>
+                
+                <div id="movie-genre" class="movie-genre"></div>
+                
+                <div class="movie-actions">
+                    <button id="watch-btn" class="btn btn-primary">
+                        <span class="btn-icon">▶</span> Watch Movie
+                    </button>
+                    <button id="download-btn" class="btn btn-secondary">
+                        <span class="btn-icon">⬇</span> Download
+                    </button>
+                    <button id="share-btn" class="btn btn-outline">
+                        <span class="btn-icon">🔗</span> Share
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Popular Movies Section -->
+            <div class="popular-movies-section">
+                <h3 class="popular-section-title">Popular Movies</h3>
+                <div id="detail-popular-movies" class="movies-scroll">
+                    <!-- Popular movies will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <h2>Movie Not Found</h2>
+            <p>The movie you're looking for doesn't exist or has been removed.</p>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Agasobanuye. All rights reserved.</p>
+            <p class="footer-contact">Contact: 0784854360</p>
+        </div>
+    </footer>
+
+    <script src="movies.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
