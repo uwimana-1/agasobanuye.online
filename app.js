@@ -239,7 +239,8 @@ function setupMovieActions(movie) {
     
     // Watch button
     watchBtn.addEventListener('click', function() {
-        window.open(movie.watchLink, '_blank');
+        // Navigate directly to watch link instead of opening in new tab
+        window.location.href = movie.watchLink;
     });
     
     // Download button
