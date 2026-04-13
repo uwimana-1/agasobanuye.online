@@ -77,11 +77,11 @@ const movies = [
   {
     id: "6",
     title: "BEAUTY IN BLACK S3E1",
-    type: "SEASONS",
+    type: "series",
     isFeatured: true,
     isPopular: true,
     poster: "/images/B.webp",
-    description: "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
+    description: "Follows: political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
     year: 2016,
     interpreter: "ROCKY",
     genre: ["Drama", "History"],
@@ -91,7 +91,7 @@ const movies = [
   {
     id: "7",
     title: "BEAUTY IN BLACK S3E2",
-    type: "SEASONS",
+    type: "series",
     isFeatured: true,
     isPopular: true,
     poster: "/images/B.webp",
@@ -101,26 +101,10 @@ const movies = [
     genre: ["MOVIES"],
     watchLink: "https://agasobanuye.seekplayer.me/#i95ff",
     downloadLink: "https://agasobanuye.seekplayer.me/#i95ff&dl=1"
-     },
-     {
-    id: "10",
-    title: "BEAUTY IN BLACK S3E3",
-    type: "SEASONS",
-    isFeatured: true,
-    isPopular: true,
-    poster: "/images/B.webp",
-    description: "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["MOVIES"],
-    watchLink: "https://agasobanuye.seekplayer.me/#5u5mx",
-    downloadLink: "https://agasobanuye.seekplayer.me/#5u5mx&dl=1"
   },
-   {
-    
-  
+  {
     id: "3",
-    title: "BEAUTY IN BLACK S3E4",
+    title: "BEAUTY IN BLACK S3E3",
     type: "series",
     isFeatured: true,
     isPopular: true,
@@ -129,10 +113,39 @@ const movies = [
     year: 2026,
     interpreter: "ROCKY",
     genre: ["series"],
-    watchLink: "https://agasobanuye.seekplayer.me/#mqeaf",
-    downloadLink: "https://agasobanuye.seekplayer.me/#mqeaf&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#so5an",
+    downloadLink: "https://agasobanuye.seekplayer.me/#so5an&dl=1"
   },
- 
+  {
+    id: "3",
+    title: "BEAUTY IN BLACK S3E5",
+    type: "series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/B.webp",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["series"],
+    watchLink: "https://agasobanuye.seekplayer.me/#so5an",
+    downloadLink: "https://agasobanuye.seekplayer.me/#so5an&dl=1"
+  },
+  {
+    
+  
+    id: "3",
+    title: "BEAUTY IN BLACK S3E6",
+    type: "series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/B.webp",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["series"],
+    watchLink: "https://agasobanuye.seekplayer.me/#1kokk",
+    downloadLink: "https://agasobanuye.seekplayer.me/#1kokk&dl=1"
+  },
   {
     id: "11",
     title: "PAD MAN A",
@@ -232,7 +245,7 @@ const movies = [
   },
   {
     id: "26",
-    title: "ADULTERS",
+    title: "ADULTERERS",
     type: "Popular",
     isFeatured: true,
     isPopular: true,
@@ -330,20 +343,7 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#3beor",
     downloadLink: "https://agasobanuye.seekplayer.me/#3beor&dl=1"
   },
-  {
-    id: "23",
-    title: "BEAUTY IN BLACK S3E5",
-    type: "SERIES",
-    isFeatured: true,
-    isPopular: true,
-    poster: "/images/H.jpg",
-    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["ACTION"],
-    watchLink: "https://agasobanuye.seekplayer.me/#1kokk",
-    downloadLink: "https://agasobanuye.seekplayer.me/#1kokk&dl=1"
-  },
+  
   {
     id: "24",
     title: "65 MILLION YEARS AGO",
@@ -385,6 +385,48 @@ const movies = [
     genre: ["ACTION"],
     watchLink: "https://agasobanuye.seekplayer.me/#bvcum",
     downloadLink: "https://agasobanuye.seekplayer.me/#bvcum&dl=1"
+  },
+  {
+    id: "3",
+    title: "EAGLE A",
+    type: "series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/E.jpg",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["series"],
+    watchLink: "https://agasobanuye.seekplayer.me/#lur31",
+    downloadLink: "https://agasobanuye.seekplayer.me/#lur31&dl=1"
+  },
+  {
+    id: "3",
+    title: "EAGLE B",
+    type: "series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/E.jpg",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["series"],
+    watchLink: "https://agasobanuye.seekplayer.me/#gz6wu",
+    downloadLink: "https://agasobanuye.seekplayer.me/#gz6wu&dl=1"
+  },
+  {
+    id: "3",
+    title: "SISU 2",
+    type: "series",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/si.jpeg",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["series"],
+    watchLink: "https://agasobanuye.seekplayer.me/#lursz",
+    downloadLink: "https://agasobanuye.seekplayer.me/#lursz&dl=1"
   },
 
   ];
