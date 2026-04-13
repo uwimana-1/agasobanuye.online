@@ -116,7 +116,7 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#5u5mx",
     downloadLink: "https://agasobanuye.seekplayer.me/#5u5mx&dl=1"
   },
-  {
+   {
     
   
     id: "3",
@@ -181,7 +181,7 @@ const movies = [
     type: "movie",
     isFeatured: true,
     isPopular: true,
-    poster: "/images/RED.jpeg",
+    poster: "/images/FL.jpeg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     year: 2026,
     interpreter: "SANKARA",
@@ -204,59 +204,73 @@ const movies = [
   },
   {
     id: "16",
-    title: "",
+    title: "THE WOMEN IN YARD",
     type: "movie",
     isFeatured: true,
     isPopular: true,
-    poster: "/images/RED.jpeg",
+    poster: "/images/W.jpg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     year: 2026,
-    interpreter: "ROCKY",
+    interpreter: "GAHEZA SIMBA",
     genre: ["ACTION"],
-    watchLink: "https://agasobanuye.seekplayer.me/#v8ind",
-    downloadLink: "https://agasobanuye.seekplayer.me/#v8ind&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#6nzva",
+    downloadLink: "https://agasobanuye.seekplayer.me/#6nzva&dl=1"
   },
   {
     id: "17",
-    title: "BLOOD RED SKY",
-    type: "movie",
+    title: "THE POSSESSION OF HANNAH GRACE",
+    type: "Popular",
     isFeatured: true,
     isPopular: true,
-    poster: "/images/RED.jpeg",
+    poster: "/images/GR.jpg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     year: 2026,
-    interpreter: "ROCKY",
+    interpreter: "GAHEZA SIMBA",
     genre: ["ACTION"],
-    watchLink: "https://agasobanuye.seekplayer.me/#v8ind",
-    downloadLink: "https://agasobanuye.seekplayer.me/#v8ind&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#hpmjr",
+    downloadLink: "https://agasobanuye.seekplayer.me/#hpmjr&dl=1"
+  },
+  {
+    id: "26",
+    title: "ADULTERS",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/AD.webp",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#mr6mu",
+    downloadLink: "https://agasobanuye.seekplayer.me/#mr6mu&dl=1"
   },
   {
     id: "18",
-    title: "BLOOD RED SKY",
+    title: "HANTER KILLER",
     type: "movie",
     isFeatured: true,
     isPopular: true,
-    poster: "/images/RED.jpeg",
+    poster: "/images/HANTER.jpg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     year: 2026,
     interpreter: "ROCKY",
     genre: ["ACTION"],
-    watchLink: "https://agasobanuye.seekplayer.me/#v8ind",
-    downloadLink: "https://agasobanuye.seekplayer.me/#v8ind&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#p1rvq",
+    downloadLink: "https://agasobanuye.seekplayer.me/#p1rvq&dl=1"
   },
   {
     id: "19",
-    title: "BLOOD RED SKY",
+    title: "JIGSAW",
     type: "movie",
     isFeatured: true,
-    isPopular: true,
-    poster: "/images/RED.jpeg",
+    isPopular: false,
+    poster: "/images/JIG.jpeg",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     year: 2026,
     interpreter: "ROCKY",
     genre: ["ACTION"],
-    watchLink: "https://agasobanuye.seekplayer.me/#v8ind",
-    downloadLink: "https://agasobanuye.seekplayer.me/#v8ind&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#mrl1f",
+    downloadLink: "https://agasobanuye.seekplayer.me/#mrl1f&dl=1"
   },
   {
     id: "20",
@@ -272,4 +286,75 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#bvqji",
     downloadLink: "https://agasobanuye.seekplayer.me/#bvqji&dl=1"
   },
-];
+  {
+    id: "22",
+    title: "WILD CAT",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/cat.jpg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "SIKOVU",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#3beor",
+    downloadLink: "https://agasobanuye.seekplayer.me/#3beor&dl=1"
+  },
+  {
+    id: "23",
+    title: "BEAUTY IN BLACK S3E5",
+    type: "SERIES",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/H.jpg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#1kokk",
+    downloadLink: "https://agasobanuye.seekplayer.me/#1kokk&dl=1"
+  },
+  {
+    id: "24",
+    title: "65 MILLION YEARS AGO",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/65.jpeg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#cj8x9",
+    downloadLink: "https://agasobanuye.seekplayer.me/#cj8x9&dl=1"
+  },
+  {
+    id: "24",
+    title: "KNOCK KNOCK B",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/KNOCK.jpeg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#hpxli",
+    downloadLink: "https://agasobanuye.seekplayer.me/#hpxli&dl=1"
+  },
+  {
+    id: "26",
+    title: "KNOCK KNOCK A",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/KNOCK.jpeg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#bvcum",
+    downloadLink: "https://agasobanuye.seekplayer.me/#bvcum&dl=1"
+  },
+
+  ];
