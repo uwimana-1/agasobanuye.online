@@ -245,6 +245,36 @@ const movies = [
     downloadLink: "https://agasobanuye.seekplayer.me/#mr6mu&dl=1"
   },
   {
+    id: "27",
+    title: "TROLLS 2",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/TR.jpeg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA ",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#tg5lq",
+    
+    downloadLink: "https://agasobanuye.seekplayer.me/#tg5lq&dl=1"
+  },
+  {
+    id: "28",
+    title: "VIVARIUM",
+    type: "Popular",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/VV.jpeg",
+    description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA ",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#hp83t",
+    
+    downloadLink: "https://agasobanuye.seekplayer.me/#hp83t&dl=1"
+  },
+  {
     id: "18",
     title: "HANTER KILLER",
     type: "movie",
