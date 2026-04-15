@@ -830,6 +830,48 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#1k1oa",
     downloadLink: "https://agasobanuye.seekplayer.me/#1k1oa&dl=1"
   },
+   {
+    id: "3",
+    title: "BAAHUBAL2 A",
+    type: "series",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/b.avif",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#mdn9z",
+    downloadLink: "https://agasobanuye.seekplayer.me/#mdn9z&dl=1"
+  },
+  {
+    id: "3",
+    title: "BAAHUBAL2 B",
+    type: "series",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/b.avif",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#uw6ce",
+    downloadLink: "https://agasobanuye.seekplayer.me/#uw6ce&dl=1"
+  },
+  {
+    id: "3",
+    title: "BAAHUBAL2 C",
+    type: "series",
+    isFeatured: true,
+    isPopular: false,
+    poster: "/images/b.avif",
+    description: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION"],
+    watchLink: "https://agasobanuye.seekplayer.me/#wxvow",
+    downloadLink: "https://agasobanuye.seekplayer.me/#wxvow&dl=1"
+  },
   {
     id: "3",
     title: "BLACK PANTHER",
