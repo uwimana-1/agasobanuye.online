@@ -125,6 +125,21 @@ body {
     color: var(--primary);
 }
 
+.donate-btn {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.donate-btn:hover {
+    background-color: #ff0a16 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4) !important;
+}
+
 /* Main Content */
 .main-content {
     margin-top: 80px;
@@ -563,6 +578,58 @@ body {
     margin: 0;
 }
 
+/* Community Section Styles */
+.community-section {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.community-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.2);
+}
+
+.community-section .footer-title {
+    color: #ffffff !important;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.community-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-group-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: #25D366;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.whatsapp-group-link:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-group-link i {
+    font-size: 1.1rem;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -698,11 +765,401 @@ body {
         text-align: center;
     }
     
+    .community-section {
+        text-align: center;
+    }
+    
+    .community-description {
+        text-align: center;
+    }
+    
+    .whatsapp-group-link {
+        justify-content: center;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
     .movie-title {
         font-size: 1.5rem;
     }
     
     .movie-description {
         font-size: 1rem;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    margin: 10% auto;
+    padding: 0;
+    border: 1px solid var(--surface-border);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.modal-title {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-btn {
+    color: var(--muted-text);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 2rem 1.5rem;
+}
+
+.donation-message {
+    text-align: center;
+    color: var(--muted-text);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.donation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.donation-item {
+    background-color: var(--surface-soft);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--surface-border);
+    transition: all 0.3s ease;
+}
+
+.donation-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.donation-item h3 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.donation-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.donation-code, .donation-number {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    flex: 1;
+}
+
+.copy-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background-color: #ff0a16;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.copy-btn.copied {
+    background-color: #28a745;
+}
+
+.copy-btn i {
+    font-size: 0.9rem;
+}
+
+.copy-text {
+    font-size: 0.9rem;
+}
+
+/* Movie Details Section */
+.movie-details-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 1500;
+    overflow-y: auto;
+    padding: 2rem 0;
+}
+
+.back-button {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--surface-border);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 2rem 2rem;
+    transition: all 0.3s ease;
+    max-width: 200px;
+}
+
+.back-button:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.movie-details-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+.movie-details-poster {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.movie-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.movie-details-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.movie-details-interpreter {
+    background-color: var(--secondary);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.movie-details-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.movie-details-meta span {
+    color: var(--muted-text);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.movie-details-meta span i {
+    color: var(--primary);
+}
+
+.movie-details-description-title {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.movie-details-description {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.download-watch-btn {
+    background-color: var(--secondary);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    max-width: 300px;
+    text-align: center;
+}
+
+.download-watch-btn:hover {
+    background-color: #ff9933;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 138, 61, 0.4);
+}
+
+/* Responsive Movie Details */
+@media (max-width: 768px) {
+    .movie-details-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .back-button {
+        margin: 0 1rem 1rem;
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .movie-details-title {
+        font-size: 2rem;
+    }
+    
+    .movie-details-meta {
+        gap: 1rem;
+    }
+    
+    .movie-details-meta span {
+        font-size: 0.9rem;
+    }
+    
+    .download-watch-btn {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Responsive Modal */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .donation-item {
+        padding: 1rem;
+    }
+    
+    .donation-info {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: stretch;
+    }
+    
+    .donation-code, .donation-number {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .copy-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.6rem;
     }
 }

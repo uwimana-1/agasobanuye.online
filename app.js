@@ -51,7 +51,10 @@ function renderFeaturedMovies() {
         return;
     }
     
-    featuredContainer.innerHTML = featuredMovies.map(movie => createMovieCard(movie)).join('');
+    featuredMovies.forEach(movie => {
+        const movieCard = createMovieScrollCard(movie);
+        featuredContainer.appendChild(movieCard);
+    });
 }
 
 // Render popular movies section
@@ -181,6 +184,25 @@ function createMovieCard(movie) {
             </div>
         </div>
     `;
+}
+
+// Create movie scroll card for horizontal sections
+function createMovieScrollCard(movie) {
+    const card = document.createElement('div');
+    card.className = 'movie-card';
+    card.style.cursor = 'pointer';
+    card.style.minWidth = '200px';
+    
+    card.innerHTML = `
+        <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" loading="lazy">
+        <div class="movie-card-info">
+            <div class="movie-card-title">${movie.title}</div>
+            <div class="movie-card-interpreter">${movie.interpreter}</div>
+        </div>
+    `;
+    
+    card.addEventListener('click', () => goToMovie(movie.id));
+    return card;
 }
 
 // Scroll section function
@@ -433,4 +455,106 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.style.backgroundColor = 'rgba(20, 20, 20, 0.95)';
     }
+});
+
+// Donation Modal functionality
+function initializeDonationModal() {
+    const donateBtn = document.getElementById('donate-btn');
+    const modal = document.getElementById('donation-modal');
+    const closeBtn = document.querySelector('.close-btn');
+
+    if (donateBtn && modal && closeBtn) {
+        // Open modal when donate button is clicked
+        donateBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal when close button is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+    }
+}
+
+// Copy to clipboard functionality
+function initializeCopyButtons() {
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const textToCopy = this.getAttribute('data-copy');
+            const copyText = this.querySelector('.copy-text');
+            const originalText = copyText.textContent;
+            
+            // Use the modern Clipboard API
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showCopySuccess(this, copyText, originalText);
+                }).catch(() => {
+                    fallbackCopy(textToCopy, this, copyText, originalText);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopy(textToCopy, this, copyText, originalText);
+            }
+        });
+    });
+}
+
+// Fallback copy method
+function fallbackCopy(text, button, copyText, originalText) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopySuccess(button, copyText, originalText);
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Show copy success feedback
+function showCopySuccess(button, copyText, originalText) {
+    button.classList.add('copied');
+    copyText.textContent = 'Copied!';
+    
+    // Reset button after 2 seconds
+    setTimeout(() => {
+        button.classList.remove('copied');
+        copyText.textContent = originalText;
+    }, 2000);
+}
+
+// Initialize back button
+document.addEventListener('DOMContentLoaded', function() {
+    initializeDonationModal();
+    initializeCopyButtons();
 });
