@@ -245,6 +245,130 @@ body {
     z-index: 10;
 }
 
+.movie-card:hover .play-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(229, 9, 20, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-button i {
+    color: white;
+    font-size: 24px;
+    margin-left: 3px;
+}
+
+.movie-poster {
+    position: relative;
+    transition: filter 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+    filter: brightness(0.7);
+}
+
+.movie-card:hover .play-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(229, 9, 20, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-button i {
+    color: white;
+    font-size: 24px;
+    margin-left: 3px;
+}
+
+.episode-count {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.episodes-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    border: 1px solid var(--surface-border);
+}
+
+.back-to-series-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.back-to-series-btn:hover {
+    background-color: #ff0a16;
+    transform: translateY(-1px);
+}
+
+.episodes-header h3 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+
 .movie-poster {
     width: 100%;
     height: 280px;
@@ -255,6 +379,55 @@ body {
 .movie-card-info {
     padding: 0.8rem;
 }
+
+.movie-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.watch-btn, .download-btn, .share-btn {
+    background-color: var(--secondary);
+    color: var(--text-color);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.watch-btn {
+    background-color: var(--primary);
+    color: white;
+}
+
+.watch-btn:hover {
+    background-color: #ff0a16;
+    transform: translateY(-1px);
+}
+
+.download-btn:hover {
+    background-color: #ff9933;
+    transform: translateY(-1px);
+}
+
+.share-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.share-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
 
 .movie-card-title {
     color: var(--text-color);
@@ -945,6 +1118,116 @@ body {
     font-size: 0.9rem;
 }
 
+/* Series Cards Styles */
+.series-card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.series-card:hover {
+    transform: translateY(-5px);
+}
+
+.series-info {
+    background-color: var(--secondary);
+    color: var(--text-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+.seasons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.season-section {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--surface-border);
+}
+
+.season-header {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.episode-count {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.episodes-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    border: 1px solid var(--surface-border);
+}
+
+.back-to-series-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.back-to-series-btn:hover {
+    background-color: #ff0a16;
+    transform: translateY(-1px);
+}
+
+.episodes-header h3 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Responsive Series Styles */
+@media (max-width: 768px) {
+    .episodes-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
 /* Movie Details Section */
 .movie-details-section {
     position: fixed;
@@ -1068,28 +1351,6 @@ body {
     margin: 0;
 }
 
-.download-watch-btn {
-    background-color: var(--secondary);
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-    max-width: 300px;
-    text-align: center;
-}
-
-.download-watch-btn:hover {
-    background-color: #ff9933;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 138, 61, 0.4);
-}
 
 /* Responsive Movie Details */
 @media (max-width: 768px) {
@@ -1117,11 +1378,7 @@ body {
         font-size: 0.9rem;
     }
     
-    .download-watch-btn {
-        width: 100%;
-        max-width: none;
     }
-}
 
 /* Responsive Modal */
 @media (max-width: 600px) {

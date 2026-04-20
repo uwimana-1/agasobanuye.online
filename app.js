@@ -8,9 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Navigate to movie detail page
+// Navigate to movie watch/download
 function goToMovie(movieId) {
-    window.location.href = `movie.html?id=${movieId}`;
+    // Find the movie by ID
+    const movie = movies.find(m => m.id === movieId);
+    
+    if (movie && movie.watchLink) {
+        // Open the watch link in a new tab
+        window.open(movie.watchLink, '_blank');
+    } else {
+        // Fallback if no movie or link found
+        alert('Watch link not available for this movie.');
+    }
 }
 
 // Initialize scroll buttons
@@ -44,35 +53,26 @@ function initializeScrollButtons() {
 // Render featured movies section
 function renderFeaturedMovies() {
     const featuredContainer = document.getElementById('featured-movies');
-    const featuredMovies = movies.filter(movie => movie.isFeatured);
+    // Show only non-series movies (everything except type: "series")
+    const featuredMovies = movies.filter(movie => movie.type !== 'series');
     
     if (featuredMovies.length === 0) {
         featuredContainer.innerHTML = '<p class="no-movies">No featured movies available.</p>';
         return;
     }
     
+    featuredContainer.innerHTML = '';
     featuredMovies.forEach(movie => {
         const movieCard = createMovieScrollCard(movie);
         featuredContainer.appendChild(movieCard);
     });
 }
 
-// Render popular movies section
-function renderPopularMovies() {
-    const popularContainer = document.getElementById('popular-movies');
-    const popularMovies = movies.filter(movie => movie.isPopular);
-    
-    if (popularMovies.length === 0) {
-        popularContainer.innerHTML = '<p class="no-movies">No popular movies available.</p>';
-        return;
-    }
-    
-    popularContainer.innerHTML = popularMovies.map(movie => createMovieCard(movie)).join('');
-}
 
 // Render series section
 function renderSeries() {
     const seriesContainer = document.getElementById('series-movies');
+    // Show only series movies (type: "series")
     const series = movies.filter(movie => movie.type === 'series');
     
     if (series.length === 0) {
@@ -80,20 +80,10 @@ function renderSeries() {
         return;
     }
     
+    // Show individual series episodes as separate cards
     seriesContainer.innerHTML = series.map(movie => createMovieCard(movie)).join('');
 }
 
-// Render all movies section
-function renderAllMovies() {
-    const allMoviesContainer = document.getElementById('all-movies');
-    
-    if (movies.length === 0) {
-        allMoviesContainer.innerHTML = '<p class="no-movies">No movies available.</p>';
-        return;
-    }
-    
-    allMoviesContainer.innerHTML = movies.map(movie => createMovieCard(movie)).join('');
-}
 
 // Initialize search functionality
 function initializeSearch() {
@@ -142,9 +132,8 @@ function displaySearchResults(results, searchTerm) {
     const searchSection = document.getElementById('search-results');
     const searchMoviesContainer = document.getElementById('search-movies');
     
-    // Hide all other sections
+    // Hide all sections
     document.getElementById('featured').style.display = 'none';
-    document.getElementById('popular').style.display = 'none';
     document.getElementById('series').style.display = 'none';
     document.getElementById('movies').style.display = 'none';
     
@@ -154,7 +143,11 @@ function displaySearchResults(results, searchTerm) {
     if (results.length === 0) {
         searchMoviesContainer.innerHTML = `<p class="no-movies">No movies found for "${searchTerm}"</p>`;
     } else {
-        searchMoviesContainer.innerHTML = results.map(movie => createMovieCard(movie)).join('');
+        searchMoviesContainer.innerHTML = '';
+        results.forEach(movie => {
+            const movieCard = createMovieCard(movie);
+            searchMoviesContainer.appendChild(movieCard);
+        });
     }
 }
 
@@ -168,7 +161,6 @@ function clearSearch() {
     
     // Show all sections
     document.getElementById('featured').style.display = 'block';
-    document.getElementById('popular').style.display = 'block';
     document.getElementById('series').style.display = 'block';
     document.getElementById('movies').style.display = 'block';
 }
@@ -176,14 +168,235 @@ function clearSearch() {
 // Create movie card HTML
 function createMovieCard(movie) {
     return `
-        <div class="movie-card" onclick="goToMovie('${movie.id}')">
-            <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" loading="lazy">
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" loading="lazy">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
             <div class="movie-card-info">
                 <div class="movie-card-title">${movie.title}</div>
                 <div class="movie-card-interpreter">${movie.interpreter}</div>
+                <div class="movie-actions" id="actions-${movie.id}">
+                    <button class="watch-btn" onclick="goToMovie('${movie.id}')">
+                        <i class="fas fa-play"></i> Watch
+                    </button>
+                    <button class="download-btn" onclick="downloadMovie('${movie.downloadLink}')">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="share-btn" onclick="shareMovie('${movie.id}')">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
             </div>
         </div>
     `;
+}
+
+// Create series single post (one poster for entire series)
+function createSeriesSinglePost(seriesName, allEpisodes) {
+    const card = document.createElement('div');
+    card.className = 'series-card';
+    card.style.cursor = 'pointer';
+    card.style.minWidth = '200px';
+    card.style.position = 'relative';
+    
+    // Use the first episode's poster
+    const firstEpisode = allEpisodes[0];
+    
+    card.innerHTML = `
+        <div style="position: relative;">
+            <img src="${firstEpisode.poster}" alt="${seriesName}" class="movie-poster" loading="lazy">
+            <div class="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="movie-card-info">
+            <div class="movie-card-title">${seriesName}</div>
+            <div class="movie-card-interpreter">${firstEpisode.interpreter}</div>
+            <div class="episode-count">${allEpisodes.length > 1 ? allEpisodes.length : ''}</div>
+            <div class="movie-actions" id="actions-${firstEpisode.id}">
+                <button class="watch-btn" onclick="goToMovie('${firstEpisode.id}')">
+                    <i class="fas fa-play"></i> Watch
+                </button>
+                <button class="download-btn" onclick="downloadMovie('${firstEpisode.downloadLink}')">
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button class="share-btn" onclick="shareMovie('${firstEpisode.id}')">
+                    <i class="fas fa-share"></i> Share
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Store episodes data for click handler
+    card.episodes = allEpisodes;
+    card.seriesName = seriesName;
+    
+    card.addEventListener('click', () => showSeriesAllEpisodes(seriesName, allEpisodes));
+    return card;
+}
+
+// Create series card that shows all seasons and episodes when clicked
+function createSeriesCard(seriesName, allEpisodes) {
+    const card = document.createElement('div');
+    card.className = 'series-card';
+    card.style.cursor = 'pointer';
+    card.style.minWidth = '200px';
+    card.style.position = 'relative';
+    
+    // Use the first episode's poster
+    const firstEpisode = allEpisodes[0];
+    
+    // Count total seasons
+    const seasons = new Set();
+    allEpisodes.forEach(ep => {
+        const match = ep.title.match(/S(\d+)E/);
+        if (match) seasons.add(match[1]);
+    });
+    const seasonCount = seasons.size || 1;
+    
+    card.innerHTML = `
+        <img src="${firstEpisode.poster}" alt="${seriesName}" class="movie-poster" loading="lazy">
+        <div class="movie-card-info">
+            <div class="movie-card-title">${seriesName}</div>
+            <div class="series-info">${seasonCount} Season${seasonCount > 1 ? 's' : ''}</div>
+            <div class="movie-card-interpreter">${firstEpisode.interpreter}</div>
+            <div class="episode-count">${allEpisodes.length > 1 ? allEpisodes.length : ''}</div>
+        </div>
+    `;
+    
+    // Store episodes data for click handler
+    card.allEpisodes = allEpisodes;
+    card.seriesName = seriesName;
+    
+    card.addEventListener('click', () => showSeriesAllEpisodes(seriesName, allEpisodes));
+    return card;
+}
+
+// Show all seasons and episodes when series card is clicked
+function showSeriesAllEpisodes(seriesName, allEpisodes) {
+    const seriesContainer = document.getElementById('series-movies');
+    
+    // Group episodes by season
+    const seasons = {};
+    allEpisodes.forEach(ep => {
+        let seasonNum = '1';
+        const match = ep.title.match(/S(\d+)E/);
+        if (match) seasonNum = match[1];
+        
+        if (!seasons[seasonNum]) {
+            seasons[seasonNum] = [];
+        }
+        seasons[seasonNum].push(ep);
+    });
+    
+    // Create header with back button
+    const header = document.createElement('div');
+    header.className = 'episodes-header';
+    header.innerHTML = `
+        <button class="back-to-series-btn" onclick="renderSeries()">
+            <i class="fas fa-arrow-left"></i> Back to Series
+        </button>
+        <h3>${seriesName} - All Seasons & Episodes</h3>
+    `;
+    
+    // Clear container and add header
+    seriesContainer.innerHTML = '';
+    seriesContainer.appendChild(header);
+    
+    // Create seasons container
+    const seasonsContainer = document.createElement('div');
+    seasonsContainer.className = 'seasons-container';
+    
+    // Add each season with its episodes
+    Object.keys(seasons).sort((a, b) => parseInt(a) - parseInt(b)).forEach(seasonNum => {
+        const seasonDiv = document.createElement('div');
+        seasonDiv.className = 'season-section';
+        
+        const seasonHeader = document.createElement('h4');
+        seasonHeader.className = 'season-header';
+        seasonHeader.textContent = `Season ${seasonNum}`;
+        seasonDiv.appendChild(seasonHeader);
+        
+        const episodesGrid = document.createElement('div');
+        episodesGrid.className = 'episodes-grid';
+        
+        seasons[seasonNum].forEach(movie => {
+            const episodeCard = createMovieCard(movie);
+            episodesGrid.appendChild(episodeCard);
+        });
+        
+        seasonDiv.appendChild(episodesGrid);
+        seasonsContainer.appendChild(seasonDiv);
+    });
+    
+    seriesContainer.appendChild(seasonsContainer);
+}
+
+// Create series card that shows all episodes when clicked
+function createSeriesCard(seriesName, allEpisodes) {
+    const card = document.createElement('div');
+    card.className = 'series-card';
+    card.style.cursor = 'pointer';
+    card.style.minWidth = '200px';
+    card.style.position = 'relative';
+    
+    // Use the first episode's poster
+    const firstEpisode = allEpisodes[0];
+    
+    card.innerHTML = `
+        <div style="position: relative;">
+            <img src="${firstEpisode.poster}" alt="${seriesName}" class="movie-poster" loading="lazy">
+            <div class="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="movie-card-info">
+            <div class="movie-card-title">${seriesName}</div>
+            <div class="movie-card-interpreter">${firstEpisode.interpreter}</div>
+            <div class="episode-count">${allEpisodes.length > 1 ? allEpisodes.length : ''}</div>
+        </div>
+    `;
+    
+    // Store episodes data for click handler
+    card.episodes = allEpisodes;
+    card.seriesName = seriesName;
+    
+    card.addEventListener('click', () => showSeriesEpisodes(seriesName, allEpisodes));
+    return card;
+}
+
+// Show series episodes when series card is clicked
+function showSeriesEpisodes(seriesName, episodes) {
+    const seriesContainer = document.getElementById('series-movies');
+    
+    // Create header with back button
+    const header = document.createElement('div');
+    header.className = 'episodes-header';
+    header.innerHTML = `
+        <button class="back-to-series-btn" onclick="renderSeries()">
+            <i class="fas fa-arrow-left"></i> Back to Series
+        </button>
+        <h3>${seriesName} - All Episodes</h3>
+    `;
+    
+    // Clear container and add header
+    seriesContainer.innerHTML = '';
+    seriesContainer.appendChild(header);
+    
+    // Create episodes container
+    const episodesContainer = document.createElement('div');
+    episodesContainer.className = 'episodes-grid';
+    
+    // Add all episode cards
+    episodes.forEach(movie => {
+        const episodeCard = createMovieCard(movie);
+        episodesContainer.appendChild(episodeCard);
+    });
+    
+    seriesContainer.appendChild(episodesContainer);
 }
 
 // Create movie scroll card for horizontal sections
@@ -194,14 +407,29 @@ function createMovieScrollCard(movie) {
     card.style.minWidth = '200px';
     
     card.innerHTML = `
-        <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" loading="lazy">
+        <div style="position: relative;">
+            <img src="${movie.poster}" alt="${movie.title}" class="movie-poster" loading="lazy">
+            <div class="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
         <div class="movie-card-info">
             <div class="movie-card-title">${movie.title}</div>
             <div class="movie-card-interpreter">${movie.interpreter}</div>
+            <div class="movie-actions" id="actions-${movie.id}">
+                <button class="watch-btn" onclick="goToMovie('${movie.id}')">
+                    <i class="fas fa-play"></i> Watch
+                </button>
+                <button class="download-btn" onclick="downloadMovie('${movie.downloadLink}')">
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button class="share-btn" onclick="shareMovie('${movie.id}')">
+                    <i class="fas fa-share"></i> Share
+                </button>
+            </div>
         </div>
     `;
     
-    card.addEventListener('click', () => goToMovie(movie.id));
     return card;
 }
 
@@ -239,41 +467,71 @@ function initializeMoviePage() {
     }, 500);
 }
 
+// Download movie function
+function downloadMovie(downloadLink) {
+    if (downloadLink) {
+        window.open(downloadLink, '_blank');
+    } else {
+        alert('Download link not available for this movie.');
+    }
+}
+
+// Show movie actions when mouse enters card
+function showMovieActions(movieId) {
+    // Hide all other action buttons first
+    document.querySelectorAll('.movie-actions').forEach(actions => {
+        actions.style.display = 'none';
+    });
+    
+    // Show this movie's action buttons
+    const actionsDiv = document.getElementById(`actions-${movieId}`);
+    if (actionsDiv) {
+        actionsDiv.style.display = 'flex';
+    }
+}
+
+// Hide movie actions when mouse leaves card
+function hideMovieActions(movieId) {
+    const actionsDiv = document.getElementById(`actions-${movieId}`);
+    if (actionsDiv) {
+        actionsDiv.style.display = 'none';
+    }
+}
+
+// Share movie function
+function shareMovie(movieId) {
+    const movie = movies.find(m => m.id === movieId);
+    if (movie) {
+        const shareText = `Check out "${movie.title}" on Agasobanuye! Watch: ${movie.watchLink}`;
+        
+        // Try to use Web Share API if available
+        if (navigator.share) {
+            navigator.share({
+                title: movie.title,
+                text: shareText,
+                url: movie.watchLink
+            }).catch(err => console.log('Share failed:', err));
+        } else {
+            // Fallback: Copy to clipboard
+            navigator.clipboard.writeText(shareText).then(() => {
+                alert('Movie link copied to clipboard!');
+            }).catch(() => {
+                alert('Share link: ' + movie.watchLink);
+            });
+        }
+    }
+}
+
 // Initialize home page
 function initializeHomePage() {
     renderFeaturedMovies();
-    renderPopularMovies();
     renderSeries();
-    renderAllMovies();
     
     // Initialize scroll buttons after content is loaded
     setTimeout(initializeScrollButtons, 100);
     
     // Initialize search functionality
     initializeSearch();
-}
-
-// Setup movie action buttons
-function setupMovieActions(movie) {
-    const watchBtn = document.getElementById('watch-btn');
-    const downloadBtn = document.getElementById('download-btn');
-    const shareBtn = document.getElementById('share-btn');
-    
-    // Watch button
-    watchBtn.addEventListener('click', function() {
-        // Navigate directly to watch link instead of opening in new tab
-        window.location.href = movie.watchLink;
-    });
-    
-    // Download button
-    downloadBtn.addEventListener('click', function() {
-        window.open(movie.downloadLink, '_blank');
-    });
-    
-    // Share button
-    shareBtn.addEventListener('click', function() {
-        shareMovie();
-    });
 }
 
 // Share movie functionality
