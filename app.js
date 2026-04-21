@@ -50,14 +50,25 @@ function initializeScrollButtons() {
     });
 }
 
-// Render featured movies section
+// Render featured movies section (HOME - Newest movies first)
 function renderFeaturedMovies() {
     const featuredContainer = document.getElementById('featured-movies');
-    // Show only non-series movies (everything except type: "series")
-    const featuredMovies = movies.filter(movie => movie.type !== 'series');
+    // Show all non-series, non-action movies, sorted by newest first
+    const featuredMovies = movies.filter(movie => {
+        return movie.type !== 'series' && movie.type !== 'ACTION';
+    });
+    
+    // Sort movies by upload date (newest first)
+    featuredMovies.sort((a, b) => {
+        // Handle movies without uploadDate (put them at the end)
+        if (!a.uploadDate) return 1;
+        if (!b.uploadDate) return -1;
+        // Sort by date (newest first)
+        return new Date(b.uploadDate) - new Date(a.uploadDate);
+    });
     
     if (featuredMovies.length === 0) {
-        featuredContainer.innerHTML = '<p class="no-movies">No featured movies available.</p>';
+        featuredContainer.innerHTML = '<p class="no-movies">No movies available.</p>';
         return;
     }
     
@@ -68,6 +79,23 @@ function renderFeaturedMovies() {
     });
 }
 
+// Render action movies section
+function renderActionMovies() {
+    const actionContainer = document.getElementById('action-movies');
+    // Show only action movies (type: "ACTION")
+    const actionMovies = movies.filter(movie => movie.type === 'ACTION');
+    
+    if (actionMovies.length === 0) {
+        actionContainer.innerHTML = '<p class="no-movies">No action movies available.</p>';
+        return;
+    }
+    
+    actionContainer.innerHTML = '';
+    actionMovies.forEach(movie => {
+        const movieCard = createMovieScrollCard(movie);
+        actionContainer.appendChild(movieCard);
+    });
+}
 
 // Render series section
 function renderSeries() {
@@ -525,6 +553,7 @@ function shareMovie(movieId) {
 // Initialize home page
 function initializeHomePage() {
     renderFeaturedMovies();
+    renderActionMovies();
     renderSeries();
     
     // Initialize scroll buttons after content is loaded

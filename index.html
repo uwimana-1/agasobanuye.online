@@ -18,6 +18,7 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#featured">HOME</a></li>
+                    <li><a href="#action">ACTION</a></li>
                     <li><a href="#series">Series</a></li>
                     <li><a href="#" id="donate-btn" class="donate-btn">Donate</a></li>
                 </ul>
@@ -45,6 +46,20 @@
             </div>
             <div id="featured-movies" class="movies-scroll">
                 <!-- Movies will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- ACTION Section -->
+        <section id="action" class="section">
+            <div class="section-header">
+                <h2 class="section-title">ACTION</h2>
+                <div class="scroll-controls">
+                    <button class="scroll-btn scroll-left" onclick="scrollSection('action-movies', 'left')">â¹</button>
+                    <button class="scroll-btn scroll-right" onclick="scrollSection('action-movies', 'right')">âº</button>
+                </div>
+            </div>
+            <div id="action-movies" class="movies-scroll">
+                <!-- Action movies will be dynamically inserted here -->
             </div>
         </section>
 
