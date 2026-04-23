@@ -114,6 +114,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#sgle3",
     downloadLink: "https://agasobanuye.seekplayer.me/#sgle3&dl=1"
   },
+  {
+    id: "1",
+    title: "STAR TREK SECTION 31",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/31.webp",
+    description: "A skilled thief is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.",
+    year: 2010,
+    interpreter: "B THE GREAT",
+    genre: ["ACTION"],
+    watchLink: "",
+    downloadLink: "https://agasobanuye.seekplayer.me/#sgle3&dl=1"
+  },
 {
     id: "1",
     title: "FATALE A",
@@ -141,6 +155,49 @@ const movies = [
     genre: ["Action", ],
     watchLink: "https://agasobanuye.seekplayer.me/#cpce1",
     downloadLink: "https://agasobanuye.seekplayer.me/#cpce1&dl=1"
+  },
+  {
+    id: "5",
+    title: " AKA",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/K.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SIKOVU",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#te3m6",
+    downloadLink: "https://agasobanuye.seekplayer.me/#te3m6&dl=1"
+  },
+  
+  {
+    id: "5",
+    title: "MOMBAI SAGA",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/SAGA.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#amhw9",
+    downloadLink: "https://agasobanuye.seekplayer.me/#amhw9&dl=1"
+  },
+   {
+    id: "5",
+    title: "ORPHANS",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/OS.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "YEAH MAN",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#hjlom",
+    downloadLink: "https://agasobanuye.seekplayer.me/#hjlom&dl=1"
   },
   {
     id: "2",

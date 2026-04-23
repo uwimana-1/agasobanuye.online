@@ -112,8 +112,7 @@ function renderSeries() {
     seriesContainer.innerHTML = series.map(movie => createMovieCard(movie)).join('');
 }
 
-
-// Simple search functions - guaranteed to work
+// Simple search - guaranteed working buttons
 function doSearch() {
     const searchInput = document.getElementById('search-input');
     const term = searchInput.value.toLowerCase().trim();
@@ -139,12 +138,95 @@ function doSearch() {
         movie.interpreter.toLowerCase().includes(term)
     );
     
-    // Display results
-    if (results.length === 0) {
-        searchContainer.innerHTML = `<p class="no-movies">No movies found for "${term}"</p>`;
-    } else {
-        searchContainer.innerHTML = results.map(movie => createMovieCard(movie)).join('');
-    }
+    // Clear and display results
+    searchContainer.innerHTML = '';
+    
+    results.forEach((movie, index) => {
+        // Create movie card
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        
+        // Create poster
+        const posterDiv = document.createElement('div');
+        posterDiv.style.position = 'relative';
+        
+        const img = document.createElement('img');
+        img.src = movie.poster;
+        img.alt = movie.title;
+        img.className = 'movie-poster';
+        img.loading = 'lazy';
+        
+        posterDiv.appendChild(img);
+        
+        // Create info
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'movie-card-info';
+        
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'movie-card-title';
+        titleDiv.textContent = movie.title;
+        
+        const interpreterDiv = document.createElement('div');
+        interpreterDiv.className = 'movie-card-interpreter';
+        interpreterDiv.textContent = movie.interpreter;
+        
+        // Create buttons
+        const actionsDiv = document.createElement('div');
+        actionsDiv.className = 'movie-actions';
+        actionsDiv.id = `actions-${movie.id}`;
+        
+        // Watch button
+        const watchBtn = document.createElement('button');
+        watchBtn.className = 'watch-btn';
+        watchBtn.innerHTML = '<i class="fas fa-play"></i> Watch';
+        watchBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('WATCH BUTTON CLICKED - Movie:', movie.title);
+            if (movie.watchLink) {
+                window.open(movie.watchLink, '_blank');
+            }
+        });
+        
+        // Download button
+        const downloadBtn = document.createElement('button');
+        downloadBtn.className = 'download-btn';
+        downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download';
+        downloadBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('DOWNLOAD BUTTON CLICKED - Movie:', movie.title);
+            if (movie.downloadLink) {
+                window.open(movie.downloadLink, '_blank');
+            }
+        });
+        
+        // Share button
+        const shareBtn = document.createElement('button');
+        shareBtn.className = 'share-btn';
+        shareBtn.innerHTML = '<i class="fas fa-share"></i> Share';
+        shareBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('SHARE BUTTON CLICKED - Movie:', movie.title);
+            if (movie.watchLink) {
+                navigator.clipboard.writeText(movie.watchLink);
+                alert('Link copied!');
+            }
+        });
+        
+        // Assemble card
+        actionsDiv.appendChild(watchBtn);
+        actionsDiv.appendChild(downloadBtn);
+        actionsDiv.appendChild(shareBtn);
+        
+        infoDiv.appendChild(titleDiv);
+        infoDiv.appendChild(interpreterDiv);
+        infoDiv.appendChild(actionsDiv);
+        
+        card.appendChild(posterDiv);
+        card.appendChild(infoDiv);
+        
+        // Add to container
+        searchContainer.appendChild(card);
+    });
 }
 
 function clearAll() {
@@ -160,7 +242,6 @@ function clearAll() {
     document.getElementById('series').style.display = 'block';
 }
 
-// Initialize search functionality
 function initializeSearch() {
     console.log('Initializing search functionality...');
     
@@ -351,13 +432,13 @@ function createMovieCard(movie) {
                 <div class="movie-card-title">${movie.title}</div>
                 <div class="movie-card-interpreter">${movie.interpreter}</div>
                 <div class="movie-actions" id="actions-${movie.id}">
-                    <button class="watch-btn" onclick="goToMovie('${movie.id}')">
+                    <button class="watch-btn" onclick="window.open('${movie.watchLink}', '_blank')">
                         <i class="fas fa-play"></i> Watch
                     </button>
-                    <button class="download-btn" onclick="downloadMovie('${movie.downloadLink}')">
+                    <button class="download-btn" onclick="window.open('${movie.downloadLink}', '_blank')">
                         <i class="fas fa-download"></i> Download
                     </button>
-                    <button class="share-btn" onclick="shareMovie('${movie.id}')">
+                    <button class="share-btn" onclick="navigator.clipboard.writeText('${movie.watchLink}'); alert('Link copied!')">
                         <i class="fas fa-share"></i> Share
                     </button>
                 </div>
