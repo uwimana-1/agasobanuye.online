@@ -13,8 +13,13 @@
             <h1 class="nav-logo"><i class="fas fa-play-circle"></i> Agasobanuye</h1>
             <div class="nav-right">
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search movies or interpreters..." class="search-input">
-                    <button id="search-btn" class="search-btn">🔍</button>
+                    <input type="text" id="search-input" placeholder="Search movies or interpreters..." class="search-input" onkeyup="if(event.key==='Enter') doSearch()">
+                    <button id="search-btn" class="search-btn" onclick="doSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="clear-search-btn" class="clear-search-btn" onclick="clearAll()" title="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#featured">HOME</a></li>

@@ -113,84 +113,228 @@ function renderSeries() {
 }
 
 
-// Initialize search functionality
-function initializeSearch() {
+// Simple search functions - guaranteed to work
+function doSearch() {
     const searchInput = document.getElementById('search-input');
-    const searchBtn = document.getElementById('search-btn');
+    const term = searchInput.value.toLowerCase().trim();
     
-    // Search on button click
-    searchBtn.addEventListener('click', performSearch);
-    
-    // Search on Enter key
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            performSearch();
-        }
-    });
-    
-    // Clear search on Escape key
-    searchInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            clearSearch();
-        }
-    });
-}
-
-// Perform search
-function performSearch() {
-    const searchInput = document.getElementById('search-input');
-    const searchTerm = searchInput.value.trim().toLowerCase();
-    
-    if (searchTerm === '') {
-        clearSearch();
+    if (!term) {
+        alert('Please enter a search term');
         return;
     }
     
-    // Search movies by title or interpreter
-    const searchResults = movies.filter(movie => 
-        movie.title.toLowerCase().includes(searchTerm) ||
-        movie.interpreter.toLowerCase().includes(searchTerm)
-    );
-    
-    displaySearchResults(searchResults, searchTerm);
-}
-
-// Display search results
-function displaySearchResults(results, searchTerm) {
-    const searchSection = document.getElementById('search-results');
-    const searchMoviesContainer = document.getElementById('search-movies');
-    
     // Hide all sections
     document.getElementById('featured').style.display = 'none';
+    document.getElementById('action').style.display = 'none';
     document.getElementById('series').style.display = 'none';
-    document.getElementById('movies').style.display = 'none';
     
     // Show search results
+    const searchSection = document.getElementById('search-results');
+    const searchContainer = document.getElementById('search-movies');
     searchSection.style.display = 'block';
     
+    // Search movies
+    const results = movies.filter(movie => 
+        movie.title.toLowerCase().includes(term) || 
+        movie.interpreter.toLowerCase().includes(term)
+    );
+    
+    // Display results
     if (results.length === 0) {
-        searchMoviesContainer.innerHTML = `<p class="no-movies">No movies found for "${searchTerm}"</p>`;
+        searchContainer.innerHTML = `<p class="no-movies">No movies found for "${term}"</p>`;
     } else {
-        searchMoviesContainer.innerHTML = '';
-        results.forEach(movie => {
-            const movieCard = createMovieCard(movie);
-            searchMoviesContainer.appendChild(movieCard);
-        });
+        searchContainer.innerHTML = results.map(movie => createMovieCard(movie)).join('');
     }
 }
 
-// Clear search
-function clearSearch() {
-    const searchInput = document.getElementById('search-input');
-    searchInput.value = '';
+function clearAll() {
+    // Clear search input
+    document.getElementById('search-input').value = '';
     
     // Hide search results
     document.getElementById('search-results').style.display = 'none';
     
     // Show all sections
     document.getElementById('featured').style.display = 'block';
+    document.getElementById('action').style.display = 'block';
     document.getElementById('series').style.display = 'block';
-    document.getElementById('movies').style.display = 'block';
+}
+
+// Initialize search functionality
+function initializeSearch() {
+    console.log('Initializing search functionality...');
+    
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    
+    console.log('Search input element:', searchInput);
+    console.log('Search button element:', searchBtn);
+    
+    if (!searchInput || !searchBtn) {
+        console.error('Search elements not found!');
+        return;
+    }
+    
+    // Simple direct search on button click
+    searchBtn.onclick = function() {
+        console.log('Search button clicked - direct method');
+        window.searchMovies();
+    };
+    
+    // Search on Enter key
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            console.log('Enter key pressed - direct method');
+            window.searchMovies();
+        }
+    });
+    
+    // Clear search on Escape key
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            console.log('Escape key pressed');
+            clearSearch();
+        }
+    });
+    
+    console.log('Search initialization complete');
+}
+
+// Perform search
+function performSearch() {
+    console.log('Search function called');
+    
+    try {
+        const searchInput = document.getElementById('search-input');
+        console.log('Search input found:', searchInput);
+        
+        if (!searchInput) {
+            console.error('Search input not found');
+            return;
+        }
+        
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        console.log('Search term:', searchTerm);
+        
+        if (searchTerm === '') {
+            console.log('Empty search term, clearing search');
+            clearSearch();
+            return;
+        }
+        
+        console.log('Total movies available:', movies.length);
+        
+        // Search movies by title or interpreter
+        const searchResults = movies.filter(movie => {
+            const titleMatch = movie.title && movie.title.toLowerCase().includes(searchTerm);
+            const interpreterMatch = movie.interpreter && movie.interpreter.toLowerCase().includes(searchTerm);
+            const genreMatch = movie.genre && movie.genre.some(g => g.toLowerCase().includes(searchTerm));
+            
+            const found = titleMatch || interpreterMatch || genreMatch;
+            if (found) {
+                console.log('Found movie:', movie.title, 'Type:', movie.type);
+            }
+            return found;
+        });
+        
+        console.log('Search results count:', searchResults.length);
+        console.log('Search results:', searchResults);
+        displaySearchResults(searchResults, searchTerm);
+        
+    } catch (error) {
+        console.error('Search error:', error);
+        alert('Search error: ' + error.message);
+    }
+}
+
+// Display search results
+function displaySearchResults(results, searchTerm) {
+    console.log('Displaying search results for:', searchTerm);
+    
+    try {
+        const searchSection = document.getElementById('search-results');
+        const searchMoviesContainer = document.getElementById('search-movies');
+        
+        console.log('Search section found:', searchSection);
+        console.log('Search container found:', searchMoviesContainer);
+        
+        if (!searchSection || !searchMoviesContainer) {
+            console.error('Search elements not found');
+            alert('Search elements not found');
+            return;
+        }
+        
+        // Hide all sections
+        const featuredSection = document.getElementById('featured');
+        const actionSection = document.getElementById('action');
+        const seriesSection = document.getElementById('series');
+        
+        if (featuredSection) featuredSection.style.display = 'none';
+        if (actionSection) actionSection.style.display = 'none';
+        if (seriesSection) seriesSection.style.display = 'none';
+        
+        // Show search results
+        searchSection.style.display = 'block';
+        
+        if (results.length === 0) {
+            searchMoviesContainer.innerHTML = `<p class="no-movies">No movies found for "${searchTerm}"</p>`;
+            console.log('No results found');
+        } else {
+            console.log('Found', results.length, 'results');
+            searchMoviesContainer.innerHTML = '';
+            results.forEach(movie => {
+                const movieCard = createMovieCard(movie);
+                searchMoviesContainer.appendChild(movieCard);
+            });
+            console.log('Search results displayed');
+        }
+        
+    } catch (error) {
+        console.error('Display search results error:', error);
+        alert('Error displaying search results: ' + error.message);
+    }
+}
+
+// Clear search
+function clearSearch() {
+    console.log('Clearing search');
+    
+    try {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.value = '';
+            console.log('Search input cleared');
+        }
+        
+        // Hide search results
+        const searchSection = document.getElementById('search-results');
+        if (searchSection) {
+            searchSection.style.display = 'none';
+            console.log('Search results hidden');
+        }
+        
+        // Show all sections
+        const featuredSection = document.getElementById('featured');
+        const actionSection = document.getElementById('action');
+        const seriesSection = document.getElementById('series');
+        
+        if (featuredSection) {
+            featuredSection.style.display = 'block';
+            console.log('Featured section shown');
+        }
+        if (actionSection) {
+            actionSection.style.display = 'block';
+            console.log('Action section shown');
+        }
+        if (seriesSection) {
+            seriesSection.style.display = 'block';
+            console.log('Series section shown');
+        }
+        
+    } catch (error) {
+        console.error('Clear search error:', error);
+        alert('Error clearing search: ' + error.message);
+    }
 }
 
 // Create movie card HTML
@@ -552,6 +696,10 @@ function shareMovie(movieId) {
 
 // Initialize home page
 function initializeHomePage() {
+    console.log('Initializing home page...');
+    console.log('Movies data loaded:', movies.length, 'movies');
+    console.log('Sample movie:', movies[0]);
+    
     renderFeaturedMovies();
     renderActionMovies();
     renderSeries();
@@ -561,6 +709,17 @@ function initializeHomePage() {
     
     // Initialize search functionality
     initializeSearch();
+    
+    // Test search functionality
+    setTimeout(() => {
+        console.log('Testing search functionality...');
+        const testSearch = document.getElementById('search-input');
+        if (testSearch) {
+            testSearch.value = 'test';
+            console.log('Test search set to:', testSearch.value);
+            performSearch();
+        }
+    }, 2000);
 }
 
 // Share movie functionality
