@@ -125,8 +125,8 @@ const movies = [
     year: 2010,
     interpreter: "B THE GREAT",
     genre: ["ACTION"],
-    watchLink: "",
-    downloadLink: "https://agasobanuye.seekplayer.me/#sgle3&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#1lm5k",
+    downloadLink: "https://agasobanuye.seekplayer.me/#1lm5k&dl=1"
   },
 {
     id: "1",
