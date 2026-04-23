@@ -112,7 +112,7 @@ function renderSeries() {
     seriesContainer.innerHTML = series.map(movie => createMovieCard(movie)).join('');
 }
 
-// Simple search - guaranteed working buttons
+// Ultra-simple search with guaranteed visible buttons
 function doSearch() {
     const searchInput = document.getElementById('search-input');
     const term = searchInput.value.toLowerCase().trim();
@@ -138,95 +138,34 @@ function doSearch() {
         movie.interpreter.toLowerCase().includes(term)
     );
     
-    // Clear and display results
-    searchContainer.innerHTML = '';
-    
-    results.forEach((movie, index) => {
-        // Create movie card
-        const card = document.createElement('div');
-        card.className = 'movie-card';
-        
-        // Create poster
-        const posterDiv = document.createElement('div');
-        posterDiv.style.position = 'relative';
-        
-        const img = document.createElement('img');
-        img.src = movie.poster;
-        img.alt = movie.title;
-        img.className = 'movie-poster';
-        img.loading = 'lazy';
-        
-        posterDiv.appendChild(img);
-        
-        // Create info
-        const infoDiv = document.createElement('div');
-        infoDiv.className = 'movie-card-info';
-        
-        const titleDiv = document.createElement('div');
-        titleDiv.className = 'movie-card-title';
-        titleDiv.textContent = movie.title;
-        
-        const interpreterDiv = document.createElement('div');
-        interpreterDiv.className = 'movie-card-interpreter';
-        interpreterDiv.textContent = movie.interpreter;
-        
-        // Create buttons
-        const actionsDiv = document.createElement('div');
-        actionsDiv.className = 'movie-actions';
-        actionsDiv.id = `actions-${movie.id}`;
-        
-        // Watch button
-        const watchBtn = document.createElement('button');
-        watchBtn.className = 'watch-btn';
-        watchBtn.innerHTML = '<i class="fas fa-play"></i> Watch';
-        watchBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            console.log('WATCH BUTTON CLICKED - Movie:', movie.title);
-            if (movie.watchLink) {
-                window.open(movie.watchLink, '_blank');
-            }
-        });
-        
-        // Download button
-        const downloadBtn = document.createElement('button');
-        downloadBtn.className = 'download-btn';
-        downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download';
-        downloadBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            console.log('DOWNLOAD BUTTON CLICKED - Movie:', movie.title);
-            if (movie.downloadLink) {
-                window.open(movie.downloadLink, '_blank');
-            }
-        });
-        
-        // Share button
-        const shareBtn = document.createElement('button');
-        shareBtn.className = 'share-btn';
-        shareBtn.innerHTML = '<i class="fas fa-share"></i> Share';
-        shareBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            console.log('SHARE BUTTON CLICKED - Movie:', movie.title);
-            if (movie.watchLink) {
-                navigator.clipboard.writeText(movie.watchLink);
-                alert('Link copied!');
-            }
-        });
-        
-        // Assemble card
-        actionsDiv.appendChild(watchBtn);
-        actionsDiv.appendChild(downloadBtn);
-        actionsDiv.appendChild(shareBtn);
-        
-        infoDiv.appendChild(titleDiv);
-        infoDiv.appendChild(interpreterDiv);
-        infoDiv.appendChild(actionsDiv);
-        
-        card.appendChild(posterDiv);
-        card.appendChild(infoDiv);
-        
-        // Add to container
-        searchContainer.appendChild(card);
+    // Create simple HTML with visible buttons
+    let html = '';
+    results.forEach(movie => {
+        html += `
+            <div style="background: #1a1a1a; border-radius: 10px; padding: 15px; margin: 10px; border: 1px solid #333;">
+                <div style="display: flex; gap: 15px;">
+                    <img src="${movie.poster}" style="width: 100px; height: 150px; object-fit: cover; border-radius: 5px;">
+                    <div style="flex: 1;">
+                        <h3 style="color: white; margin: 0 0 10px 0;">${movie.title}</h3>
+                        <p style="color: #ccc; margin: 0 0 15px 0;">${movie.interpreter}</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button onclick="window.open('${movie.watchLink}', '_blank')" style="background: #e50914; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+                            <button onclick="window.open('${movie.downloadLink}', '_blank')" style="background: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                            <button onclick="navigator.clipboard.writeText('${movie.watchLink}'); alert('Link copied!')" style="background: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                                <i class="fas fa-share"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
     });
+    
+    searchContainer.innerHTML = html;
 }
 
 function clearAll() {
