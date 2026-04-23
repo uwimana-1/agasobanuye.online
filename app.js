@@ -709,17 +709,6 @@ function initializeHomePage() {
     
     // Initialize search functionality
     initializeSearch();
-    
-    // Test search functionality
-    setTimeout(() => {
-        console.log('Testing search functionality...');
-        const testSearch = document.getElementById('search-input');
-        if (testSearch) {
-            testSearch.value = 'test';
-            console.log('Test search set to:', testSearch.value);
-            performSearch();
-        }
-    }, 2000);
 }
 
 // Share movie functionality
