@@ -208,9 +208,23 @@ const movies = [
     description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
     year: 2026,
     interpreter: "YEAH MAN",
-    genre: ["Action", ],
+    genre: ["ACTION", ],
     watchLink: "https://agasobanuye.seekplayer.me/#hjlom",
     downloadLink: "https://agasobanuye.seekplayer.me/#hjlom&dl=1"
+  },
+  {
+    id: "5",
+    title: "FAN",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/FN.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#hjil5",
+    downloadLink: "https://agasobanuye.seekplayer.me/#hjil5&dl=1"
   },
   {
     id: "2",
