@@ -27,6 +27,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#5b3m8",
     downloadLink: "https://agasobanuye.seekplayer.me/#5b3m8&dl=1"
   },
+  {
+    id: "5",
+    title:"ASSASSINS",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/ASSA.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#edwhp",
+    downloadLink: "https://agasobanuye.seekplayer.me/#edwhp&dl=1"
+  },
    {
     id: "5",
     title:"PRETTY LETHAL",
@@ -40,6 +54,48 @@ const movies = [
     genre: ["Action", ],
     watchLink: "https://agasobanuye.seekplayer.me/#b19s6",
     downloadLink: "https://agasobanuye.seekplayer.me/#b19s6&dl=1"
+  },
+  {
+    id: "5",
+    title:"LIVE FREE OR DIE HARD",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/DIE.webp",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "JUNIOR GITI",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#l6ini",
+    downloadLink: "https://agasobanuye.seekplayer.me/#l6ini&dl=1"
+  },
+  {
+    id: "5",
+    title:"MUNNA MACHEL",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/MUNNA.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "JUNIOR GITI",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#mxns1",
+    downloadLink: "https://agasobanuye.seekplayer.me/#mxns1&dl=1"
+  },
+  {
+    id: "5",
+    title:"KOI MIL GAYA",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/MIL.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Action", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#8uler",
+    downloadLink: "https://agasobanuye.seekplayer.me/#8uler&dl=1"
   },
    {
     id: "5",
