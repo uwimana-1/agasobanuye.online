@@ -1,6 +1,34 @@
 const movies = [
    {
     id: "5",
+    title:"BOUND ",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/BOUND.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#15rre",
+    downloadLink: "https://agasobanuye.seekplayer.me/#15rre&dl=1"
+  },
+  {
+    id: "5",
+    title:"PROTECTOR",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/TECT.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#houu5",
+    downloadLink: "https://agasobanuye.seekplayer.me/#houu5&dl=1"
+  },
+  {
+    id: "5",
     title:"PELE",
     type: "ACTION",
     isFeatured: true,
