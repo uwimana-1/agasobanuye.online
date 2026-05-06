@@ -1,7 +1,7 @@
 const movies = [
   {
     id: "5",
-    title:" STRONG WOMEN S1EP1" ,
+    title:" STRONG WOMAN S1EP1" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -15,7 +15,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP2" ,
+    title:" STRONG WOMAN S1EP2" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -29,7 +29,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP3" ,
+    title:" STRONG WOMAN S1EP3" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -43,7 +43,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP4" ,
+    title:" STRONG WOMAN S1EP4" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -57,7 +57,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP5" ,
+    title:" STRONG WOMAN S1EP5" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -71,7 +71,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP6" ,
+    title:" STRONG WOMAN S1EP6" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -85,7 +85,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP7" ,
+    title:" STRONG WOMAN S1EP7" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -99,7 +99,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" STRONG WOMEN S1EP8" ,
+    title:" STRONG WOMAN S1EP8" ,
     type: "Series",
     isFeatured: true,
     isPopular: true,
