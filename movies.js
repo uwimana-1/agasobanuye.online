@@ -1,4 +1,32 @@
 const movies = [
+ {
+    id: "5",
+    title:"M.I.A S1EP1",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MIA.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SIKOVU",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#m5v68",
+     downloadLink: "https://agasobanuye.seekplayer.me/#m5v68&dl=1"
+  },
+  {
+    id: "5",
+    title:"M.I.A S1EP2",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MIA.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SIKOVU",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#gkwux",
+     downloadLink: "https://agasobanuye.seekplayer.me/#gkwux&dl=1"
+  },
   {
     id: "5",
     title:"BERLIN S2EP1 ",
@@ -141,7 +169,7 @@ const movies = [
   },
   {
     id: "5",
-    title:"Memorist S1EP6 FINAL",
+    title:"Memorist S1EP6",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -656,6 +684,20 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#hmw8m",
      downloadLink: "https://agasobanuye.seekplayer.me/#hmw8m&dl=1"
+  },
+  {
+    id: "5",
+    title:"PRISONER S1EP6 FINAL",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/PR.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#5ghqw",
+     downloadLink: "https://agasobanuye.seekplayer.me/#5ghqw&dl=1"
   },
   {
     id: "5",
@@ -1708,6 +1750,20 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#ipffd",
      downloadLink: "https://agasobanuye.seekplayer.me/#ipffd&dl=1"
+  },
+  {
+    id: "5",
+    title: "PUSH",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/PSH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#lo3z9",
+    downloadLink: "https://agasobanuye.seekplayer.me/#lo3z9&dl=1"
   },
   {
     id: "5",
