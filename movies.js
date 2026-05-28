@@ -1767,6 +1767,20 @@ const movies = [
   },
   {
     id: "5",
+    title: "THE LONE RENGER",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/LONE.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SAVIMBI",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#5ghkf",
+    downloadLink: "https://agasobanuye.seekplayer.me/#5ghkf&dl=1"
+  },
+  {
+    id: "5",
     title: "KADAMBAN",
     type: "ACTION",
     isFeatured: true,
