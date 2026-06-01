@@ -724,8 +724,8 @@ const movies = [
     year: 2026,
     interpreter: "SANKARA",
     genre: ["Series", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#v3hoq",
-     downloadLink: "https://agasobanuye.seekplayer.me/#v3hoq&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#kjyp8",
+     downloadLink: "https://agasobanuye.seekplayer.me/#kjyp8&dl=1"
   },
   {
     id: "5",
