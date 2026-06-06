@@ -1977,6 +1977,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#syegf",
     downloadLink: "https://agasobanuye.seekplayer.me/#syegf&dl=1"
   },
+   {
+    id: "5",
+    title: "RISE 3",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/CX.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SAVIMBI",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#bxyk8",
+    downloadLink: "https://agasobanuye.seekplayer.me/#bxyk8&dl=1"
+  },
   {
     id: "5",
     title: "PUSH",
