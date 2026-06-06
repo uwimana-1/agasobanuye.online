@@ -1951,6 +1951,20 @@ const movies = [
   },
   {
     id: "5",
+    title: "BEAST",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/BEAST.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#6d1op",
+    downloadLink: "https://agasobanuye.seekplayer.me/#6d1op&dl=1"
+  },
+  {
+    id: "5",
     title: "PUSH",
     type: "ACTION",
     isFeatured: true,
