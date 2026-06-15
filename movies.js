@@ -1104,7 +1104,8 @@ const movies = [
     interpreter: "SANKARA",
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#kemd1",
-   } downloadLink: "https://agasobanuye.seekplayer.me/#kemd1&dl=1"
+     downloadLink: "https://agasobanuye.seekplayer.me/#kemd1&dl=1"
+  },
   {
     id: "5",
     title:"BRIDAL MASK S1EP15",
