@@ -2453,6 +2453,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#syegf",
     downloadLink: "https://agasobanuye.seekplayer.me/#syegf&dl=1"
   },
+  {
+    id: "5",
+    title: "SEVEN SNEPERS",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/SN.webp",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "GAHEZA SIMBA",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#syegf",
+    downloadLink: "https://agasobanuye.seekplayer.me/#syegf&dl=1"
+  },
    {
     id: "5",
     title: "RISE 3",
