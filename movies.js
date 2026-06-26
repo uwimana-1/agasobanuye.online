@@ -1,5 +1,36 @@
 const movies = [
+ 
+ 
  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP1",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MIST.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#knh9n",
+     downloadLink: "https://agasobanuye.seekplayer.me/#knh9n&dl=1"
+  },
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP2",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MIST.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#mty5f",
+     downloadLink: "https://agasobanuye.seekplayer.me/#mty5f&dl=1"
+  },
+ 
+  {
     id: "5",
     title:"M.I.A S1EP1",
     type: "Series",
