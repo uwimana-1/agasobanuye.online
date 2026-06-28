@@ -29,7 +29,48 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#mty5f",
      downloadLink: "https://agasobanuye.seekplayer.me/#mty5f&dl=1"
   },
- 
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP3",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#cqwq8",
+     downloadLink: "https://agasobanuye.seekplayer.me/#cqwq8&dl=1"
+  },
+ {
+    id: "5",
+    title:"THE POLYGAMIST S1EP4",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#esktj",
+     downloadLink: "https://agasobanuye.seekplayer.me/#esktj&dl=1"
+  },
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP5",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#3feze",
+     downloadLink: "https://agasobanuye.seekplayer.me/#3feze&dl=1"
+  },
   {
     id: "5",
     title:"M.I.A S1EP1",
