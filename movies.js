@@ -253,6 +253,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#waorg",
      downloadLink: "https://agasobanuye.seekplayer.me/#waorg&dl=1"
   },
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP19",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#v9eap",
+     downloadLink: "https://agasobanuye.seekplayer.me/#v9eap&dl=1"
+  },
   
   {
     id: "5",
@@ -267,6 +281,34 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#u8cne",
      downloadLink: "https://agasobanuye.seekplayer.me/#u8cne&dl=1"
+  },
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP21",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#nug91",
+     downloadLink: "https://agasobanuye.seekplayer.me/#nug91&dl=1"
+  },
+  {
+    id: "5",
+    title:"THE POLYGAMIST S1EP22 FINAL",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MU.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#espui",
+     downloadLink: "https://agasobanuye.seekplayer.me/#espui&dl=1"
   },
   {
     id: "5",
