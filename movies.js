@@ -1,5 +1,66 @@
 const movies = [
+ 
+ 
+ 
+ 
  {
+    id: "5",
+    title:" BLADE MAN S1EP1",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MAN.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#jha5w",
+     downloadLink: "https://agasobanuye.seekplayer.me/#jha5w&dl=1"
+  },
+ {
+    id: "5",
+    title:" BLADE MAN S1EP2",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MAN.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#crkqw",
+     downloadLink: "https://agasobanuye.seekplayer.me/#crkqw&dl=1"
+  },
+  {
+    id: "5",
+    title:" BLADE MAN S1EP3",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MAN.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#naq6b",
+     downloadLink: "https://agasobanuye.seekplayer.me/#naq6b&dl=1"
+  },
+  {
+    id: "5",
+    title:" BLADE MAN S1EP5",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/images/MAN.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#hf9zd",
+     downloadLink: "https://agasobanuye.seekplayer.me/#hf9zd&dl=1"
+  },
+ 
+  {
     id: "5",
     title:" I WILL FIND YOU S1EP1",
     type: "Series",
