@@ -3076,17 +3076,17 @@ const movies = [
   },
    {
     id: "5",
-    title: "THE LION KING A",
+    title: "CREED 3",
     type: "ACTION",
     isFeatured: true,
     isPopular: true,
-    poster: "/images/KING.jpeg",
+    poster: "/images/CREEO.jpeg",
     description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
     year: 2026,
     interpreter: "ROCKY",
     genre: ["ACTION", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#syegf",
-    downloadLink: "https://agasobanuye.seekplayer.me/#syegf&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#eu55u",
+    downloadLink: "https://agasobanuye.seekplayer.me/#eu55u&dl=1"
   },
   {
     id: "5",
