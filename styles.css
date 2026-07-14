@@ -1121,6 +1121,14 @@ body {
     flex: 1;
 }
 
+.account-name {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 500;
+    font-style: italic;
+}
+
 .copy-btn {
     background-color: var(--primary);
     color: white;
