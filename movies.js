@@ -1,8 +1,76 @@
 const movies = [
  
  
- 
- 
+ {
+    id: "5",
+    title:" AGENT KIM S1EP1",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#hdfv6",
+     downloadLink: "https://agasobanuye.seekplayer.me/#hdfv6&dl=1"
+  },
+ {
+    id: "5",
+    title:" AGENT KIM S1EP2",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#s8q9g",
+     downloadLink: "https://agasobanuye.seekplayer.me/#s8q9g&dl=1"
+  },
+  {
+    id: "5",
+    title:" AGENT KIM S1EP3",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#aldyh",
+     downloadLink: "https://agasobanuye.seekplayer.me/#aldyh&dl=1"
+  },
+  {
+    id: "5",
+    title:" AGENT KIM S1EP4",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#jha5w",
+     downloadLink: "https://agasobanuye.seekplayer.me/#jha5w&dl=1"
+  },
+  {
+    id: "5",
+    title:" AGENT KIM S1EP5",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#kymkk",
+     downloadLink: "https://agasobanuye.seekplayer.me/#kymkk&dl=1"
+  },
  {
     id: "5",
     title:" BLADE MAN S1EP1",
