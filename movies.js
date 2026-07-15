@@ -71,6 +71,21 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#kymkk",
      downloadLink: "https://agasobanuye.seekplayer.me/#kymkk&dl=1"
   },
+   {
+    id: "5",
+    title:" AGENT KIM S1EP6",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/KIM.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#vppij",
+     downloadLink: "https://agasobanuye.seekplayer.me/#vppij&dl=1"
+  },
+ 
  {
     id: "5",
     title:" BLADE MAN S1EP1",
@@ -3085,6 +3100,34 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#95en9",
      downloadLink: "https://agasobanuye.seekplayer.me/#95en9&dl=1"
+  },
+  {
+    id: "5",
+    title:" SAIYAARA A",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/BLAST V.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#gauvd",
+     downloadLink: "https://agasobanuye.seekplayer.me/#gauvd&dl=1"
+  },
+   {
+    id: "5",
+    title:" SAIYAARA B",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/BLAST V.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#m9bnz",
+     downloadLink: "https://agasobanuye.seekplayer.me/#m9bnz&dl=1"
   },
    {
     id: "5",
