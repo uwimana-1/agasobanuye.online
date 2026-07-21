@@ -25,8 +25,8 @@ const movies = [
     year: 2026,
     interpreter: "JUNIOR GITI",
     genre: ["Series", ],
-    watchLink: "",
-     downloadLink: "https://agasobanuye.seekplayer.me/#hdfv6&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#c88z1",
+     downloadLink: "https://agasobanuye.seekplayer.me/#c88z1&dl=1"
   },
   {
     id: "5",
@@ -98,7 +98,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#tlruz",
      downloadLink: "https://agasobanuye.seekplayer.me/#tlruz&dl=1"
   },
-  
+   {
+    id: "5",
+    title:" SIX S1EP8 FINAL",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/SIXE.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "JUNIOR GITI",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#jtttx",
+     downloadLink: "https://agasobanuye.seekplayer.me/#jtttx&dl=1"
+  },
  {
     id: "5",
     title:" AGENT KIM S1EP1",
