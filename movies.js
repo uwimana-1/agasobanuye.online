@@ -66,8 +66,8 @@ const movies = [
     year: 2026,
     interpreter: "ROCKY",
     genre: ["Series", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#t5ubo",
-     downloadLink: "https://agasobanuye.seekplayer.me/#t5ubo&dl=1"
+    watchLink: "https://agasobanuye.seekplayer.me/#wpjvg",
+     downloadLink: "https://agasobanuye.seekplayer.me/#wpjvg&dl=1"
   },
   {
     id: "5",
