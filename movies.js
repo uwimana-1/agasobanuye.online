@@ -3550,6 +3550,49 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#95en9",
      downloadLink: "https://agasobanuye.seekplayer.me/#95en9&dl=1"
   },
+  
+   {
+    id: "5",
+    title:" BLAST A",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/BLAST V.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#b3wzi",
+     downloadLink: "https://agasobanuye.seekplayer.me/#b3wzi&dl=1"
+  },
+  {
+    id: "5",
+    title:" MICHAEL A",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MICH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#9llkc",
+     downloadLink: "https://agasobanuye.seekplayer.me/#9llkc&dl=1"
+  },
+  {
+    id: "5",
+    title:" MICHAEL B",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/MICH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#maaug",
+     downloadLink: "https://agasobanuye.seekplayer.me/#maaug&dl=1"
+  },
   {
     id: "5",
     title:" SAIYAARA A",
@@ -3633,48 +3676,6 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#idlse",
      downloadLink: "https://agasobanuye.seekplayer.me/#idlse&dl=1"
-  },
-   {
-    id: "5",
-    title:" BLAST A",
-    type: "Series",
-    isFeatured: true,
-    isPopular: true,
-    poster: "images/BLAST V.jpeg",
-    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["Series", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#b3wzi",
-     downloadLink: "https://agasobanuye.seekplayer.me/#b3wzi&dl=1"
-  },
-  {
-    id: "5",
-    title:" MICHAEL A",
-    type: "Series",
-    isFeatured: true,
-    isPopular: true,
-    poster: "images/MICH.jpeg",
-    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["Series", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#9llkc",
-     downloadLink: "https://agasobanuye.seekplayer.me/#9llkc&dl=1"
-  },
-  {
-    id: "5",
-    title:" MICHAEL B",
-    type: "Series",
-    isFeatured: true,
-    isPopular: true,
-    poster: "images/MICH.jpeg",
-    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["Series", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#maaug",
-     downloadLink: "https://agasobanuye.seekplayer.me/#maaug&dl=1"
   },
   {
     id: "5",
