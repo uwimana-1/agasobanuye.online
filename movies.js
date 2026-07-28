@@ -1,7 +1,7 @@
 const movies = [
  {
     id: "5",
-    title:" HERPER'S ISLAND S1EP1",
+    title:" HARPER'S ISLAND S1EP1",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -15,7 +15,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP2",
+    title:" HARPER'S ISLAND S1EP2",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -29,7 +29,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP3",
+    title:" HARPER'S ISLAND S1EP3",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -43,7 +43,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP4",
+    title:" HARPER'S ISLAND S1EP4",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -57,7 +57,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP5",
+    title:" HARPER'S ISLAND S1EP5",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -71,7 +71,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP6",
+    title:" HARPER'S ISLAND S1EP6",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -85,7 +85,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP7",
+    title:" HARPER'S ISLAND S1EP7",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -99,7 +99,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP8",
+    title:" HARPER'S ISLAND S1EP8",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -113,7 +113,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP9",
+    title:" HARPER'S ISLAND S1EP9",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -127,7 +127,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP10",
+    title:" HARPER'S ISLAND S1EP10",
     type: "Series",
     isFeatured: true,
     isPopular: true,
@@ -141,7 +141,7 @@ const movies = [
   },
   {
     id: "5",
-    title:" HERPER'S ISLAND S1EP11",
+    title:" HARPER'S ISLAND S1EP11",
     type: "Series",
     isFeatured: true,
     isPopular: true,
