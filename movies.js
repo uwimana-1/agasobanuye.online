@@ -3593,7 +3593,22 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#maaug",
      downloadLink: "https://agasobanuye.seekplayer.me/#maaug&dl=1"
   },
+ 
   {
+    id: "5",
+    title: "BIG GAME",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "/images/GG.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#hdy3q",
+    downloadLink: "https://agasobanuye.seekplayer.me/#hdy3q&dl=1"
+  },
+   {
     id: "5",
     title:" SAIYAARA A",
     type: "Series",
@@ -3676,20 +3691,6 @@ const movies = [
     genre: ["Series", ],
     watchLink: "https://agasobanuye.seekplayer.me/#idlse",
      downloadLink: "https://agasobanuye.seekplayer.me/#idlse&dl=1"
-  },
-  {
-    id: "5",
-    title: "BIG GAME",
-    type: "ACTION",
-    isFeatured: true,
-    isPopular: true,
-    poster: "/images/GG.jpeg",
-    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
-    year: 2026,
-    interpreter: "ROCKY",
-    genre: ["ACTION", ],
-    watchLink: "https://agasobanuye.seekplayer.me/#hdy3q",
-    downloadLink: "https://agasobanuye.seekplayer.me/#hdy3q&dl=1"
   },
   {
     id: "5",
