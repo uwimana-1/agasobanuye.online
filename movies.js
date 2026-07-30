@@ -41,7 +41,20 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#tiucu",
      downloadLink: "https://agasobanuye.seekplayer.me/#tiucu&dl=1"
   },
-  
+  {
+    id: "5",
+    title:" REMEMBER_WAR OF THE SON S1EP4",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/REMB.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "ROCKY",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#kqstv",
+     downloadLink: "https://agasobanuye.seekplayer.me/#kqstv&dl=1"
+  },
   {
     id: "5",
     title:" REMEMBER_WAR OF THE SON S1EP5",
