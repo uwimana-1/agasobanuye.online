@@ -1,5 +1,48 @@
 const movies = [
-   {
+  {
+    id: "5",
+    title:" DEATH GAME S1EP1",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/DEATH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#i8aqk",
+     downloadLink: "https://agasobanuye.seekplayer.me/#i8aqk&dl=1"
+  },
+  {
+    id: "5",
+    title:" DEATH GAME S1EP2",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/DEATH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#o61mr",
+     downloadLink: "https://agasobanuye.seekplayer.me/#o61mr&dl=1"
+  },
+  {
+    id: "5",
+    title:" DEATH GAME S1EP3",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/DEATH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#mjzah",
+     downloadLink: "https://agasobanuye.seekplayer.me/#mjzah&dl=1"
+  },
+  {
+
     id: "5",
     title:" THE OVAL S2EP1",
     type: "Series",
@@ -13,6 +56,7 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#cldfz",
      downloadLink: "https://agasobanuye.seekplayer.me/#cldfz&dl=1"
   },
+   
   {
     id: "5",
     title:" THE OVAL S2EP2",
