@@ -41,6 +41,34 @@ const movies = [
     watchLink: "https://agasobanuye.seekplayer.me/#mjzah",
      downloadLink: "https://agasobanuye.seekplayer.me/#mjzah&dl=1"
   },
+   {
+    id: "5",
+    title:" DEATH GAME S1EP4",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/DEATH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#xzvqx",
+     downloadLink: "https://agasobanuye.seekplayer.me/#xzvqx&dl=1"
+  },
+   {
+    id: "5",
+    title:" DEATH GAME S1EP5",
+    type: "Series",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/DEATH.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["Series", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#ahlzs",
+     downloadLink: "https://agasobanuye.seekplayer.me/#ahlzs&dl=1"
+  },
   {
 
     id: "5",
@@ -4392,6 +4420,20 @@ const movies = [
     genre: ["ACTION", ],
     watchLink: "https://agasobanuye.seekplayer.me/#xncx6",
     downloadLink: "https://agasobanuye.seekplayer.me/#xncx6&dl=1"
+  },
+   {
+    id: "5",
+    title: "ADDICTED",
+    type: "ACTION",
+    isFeatured: true,
+    isPopular: true,
+    poster: "images/ADDD.jpeg",
+    description: "A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to free humanity.",
+    year: 2026,
+    interpreter: "SANKARA",
+    genre: ["ACTION", ],
+    watchLink: "https://agasobanuye.seekplayer.me/#epuha",
+    downloadLink: "https://agasobanuye.seekplayer.me/#epuha&dl=1"
   },
   {
     id: "5",
